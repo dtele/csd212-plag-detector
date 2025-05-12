@@ -1,0 +1,74 @@
+preprocess:
+  paths:
+    assignments_folder: "D:\\sem6\\dip\\csd212-plag-detector\\.content\\assignments_p2"
+    formatted_folder: "D:\\sem6\\dip\\csd212-plag-detector\\.content\\formatted_p2"
+    base_files_folder: "D:\\sem6\\dip\\csd212-plag-detector\\.content\\base"
+    base_output_folder: "D:\\sem6\\dip\\csd212-plag-detector\\.content\\base_out"
+
+  demos:
+    2:
+      demo_name: "[CSD212] Demo-02"
+      base_name: "Base2.ipynb"
+    3:
+      demo_name: "Demo-03"
+      base_name: "Base3.ipynb"
+    4:
+      demo_name: "Lab-04"
+      base_name: "Base4.ipynb"
+    5:
+      demo_name: "Lab05"
+      base_name: "Base5.ipynb"
+    6:
+      demo_name: "Lab06"
+      base_name: "Base6.ipynb"
+    7:
+      demo_name: "Lab07"
+      base_name: "Base7.ipynb"
+    8:
+      demo_name: "Lab08"
+      base_name: "Base8.ipynb"
+    9:
+      demo_name: "Lab09"
+      base_name: "Base9.ipynb"
+    10:
+      demo_name: "Lab10"
+      base_name: "Base10.ipynb"
+    11:
+      demo_name: "Lab11"
+      base_name: "Base11.ipynb"
+    12:
+      demo_name: "Lab12"
+      base_name: "Base12.ipynb"
+
+detector:
+  paths:
+    demo: 9
+    preprocessed_assignments_folder: "D:\\sem6\\dip\\csd212-plag-detector\\.content\\formatted_p2"
+    plagiarism_excel_save_path: "D:\\sem6\\dip\\csd212-plag-detector\\.content\\results\\p2\\Demo9.xlsx"
+    teams_excel_path: "D:\\sem6\\dip\\csd212-plag-detector\\.content\\p2d9.xlsx"
+
+  fingerprint:
+    k: 20
+    win_size: 4
+    boilerplate:
+      - 'import numpy as np'
+      - 'import cv2 as cv'
+      - 'from matplotlib import pyplot as plt'
+      - 'plt.imshow'
+      - 'plt.plot'
+      - 'plt.subplot'
+      - 'plt.axis'
+      - 'plt.show'
+      - 'cv.imread'
+      - 'cv.imshow'
+
+  plagiarism:
+    penalties:
+      0.8: 0.25
+      0.9: 0.5
+      1: 1
+
+  excel:
+    teams_row_start: 3
+    teams_name_col: 'D'
+    teams_marks_col: 'M'
